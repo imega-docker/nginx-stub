@@ -1,6 +1,6 @@
 # Nginx Stub
 
-[![CircleCI](https://circleci.com/gh/imega-docker/nginx-stub.svg?style=svg)](https://circleci.com/gh/imega-docker/nginx-stub)
+[![](https://images.microbadger.com/badges/image/imega/nginx-stub.svg)](http://microbadger.com/images/imega/nginx-stub "Get your own image badge on microbadger.com") [![CircleCI](https://circleci.com/gh/imega-docker/nginx-stub.svg?style=svg)](https://circleci.com/gh/imega-docker/nginx-stub)
 
 ## Usage
 
