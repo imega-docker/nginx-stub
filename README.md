@@ -1,5 +1,7 @@
 # Nginx Stub
 
+[![CircleCI](https://circleci.com/gh/imega-docker/nginx-stub.svg?style=svg)](https://circleci.com/gh/imega-docker/nginx-stub)
+
 ## Usage
 
 Run daemon with stub
