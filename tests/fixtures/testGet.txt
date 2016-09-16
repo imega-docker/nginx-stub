@@ -1,0 +1,5 @@
+GET /very/long/path?param=value HTTP/1.1
+Host: server
+User-Agent: curl/7.50.2
+Accept: */*
+

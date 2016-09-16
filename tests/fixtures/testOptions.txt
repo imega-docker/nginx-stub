@@ -1,0 +1,5 @@
+OPTIONS / HTTP/1.1
+Host: server
+User-Agent: curl/7.50.2
+Accept: */*
+

@@ -1,0 +1,70 @@
+POST /very/long/path?param=value HTTP/1.1
+Host: imega.club
+Accept-Encoding: deflate, gzip
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:48.0) Gecko/20100101 Firefox/48.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Referer: http://imega.ru
+Cookie: _ga=GA1.2.291932563.1441102384; nlsrv1022=true; nlsrv0=true; __utma=46259896.291932563.1441102384.1443433133.1443516390.2; nlsrv1363=true; _ym_uid=1462011024640116204; id=765456; token=1754391bf5473520c87679724a1d337270b2fce9; _ga=GA1.3.291932563.1441102384; REFERER=; _ym_visorc_17273296=w; _ym_isad=2; _dc_gtm_UA-27371119-1=1; _gat_UA-27371119-1=1; PHPSESSID=o3vhvbpg1jrvcse81ttop3ga65; _gali=agent-registration
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Type: multipart/form-data; boundary=---------------------------10350840203924731286393838
+Content-Length: 1723
+Expect: 100-continue
+
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[name]"
+
+dfgdgdfgdf sfgdfgdfg
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[email]"
+
+info@imega.ru
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[city]"
+
+Санкт-Петербург
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[site]"
+
+http://imega.ru
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[about]"
+
+вап вп вап вр варва равр ва рав рапр авр 
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[skills][]"
+
+0
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[skills][]"
+
+2
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[skills][]"
+
+4
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[works][]"
+
+http://imega.ru
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="example-placeholder"
+
+
+-----------------------------10350840203924731286393838
+
+Content-Disposition: form-data; name="form_registration[photo]"; filename="Снимок экрана 2016-09-16 в 11.00.59.png"
+Content-Type: image/png
+
+---------------------------10350840203924731286393838--
