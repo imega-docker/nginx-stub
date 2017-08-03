@@ -12,29 +12,29 @@ buildfs:
 		imega/base-builder \
 		--packages="nginx-lua@v34"
 
-build/containers/nginx_stub:
+containers/nginx_stub:
 	@mkdir -p $(CURDIR)/$(shell dirname $@)
 	@docker run -d --name nginx_stub $(APPDIR) -v $(CURDIR)/data:/data imega/nginx-stub
 	@touch $@
 
 get_containers:
-	$(eval CONTAINERS := $(subst build/containers/,,$(shell find build/containers -type f)))
+	$(eval CONTAINERS := $(subst containers/,,$(shell find containers -type f)))
 
 stop: get_containers
 	@-docker stop $(CONTAINERS)
 
 clean: stop
 	@-docker rm -fv $(CONTAINERS)
-	@-rm -rf build/containers/*
+	@-rm -rf containers/*
 
 logdir:
 	@mkdir -p $(CURDIR)/src/app/logs
 	@touch $(CURDIR)/src/app/logs/error.log
 
 start: APPDIR = -v $(CURDIR)/src/app:/app
-start: logdir build/containers/nginx_stub
+start: logdir containers/nginx_stub
 
-test: build build/containers/nginx_stub
+test: build containers/nginx_stub
 	@mkdir -p $(CURDIR)/data
 	@docker run --rm=$(DOCKER_RM) \
 		-v $(CURDIR)/tests:/tests \
