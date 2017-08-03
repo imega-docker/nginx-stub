@@ -14,7 +14,7 @@ buildfs:
 
 containers/nginx_stub:
 	@mkdir -p $(CURDIR)/$(shell dirname $@)
-	@docker run -d --name nginx_stub $(APPDIR) -v $(CURDIR)/data:/data imega/nginx-stub
+	@docker run -d --name nginx_stub $(APPDIR) -v $(CURDIR)/data:/data imega/nginx-stub:$(TAG)
 	@touch $@
 
 get_containers:
