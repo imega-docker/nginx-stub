@@ -1,0 +1,15 @@
+branches:
+  only:
+    - master
+
+services:
+  - docker
+
+script:
+  - make test || exit 1
+
+after_success:
+  - >
+    [ "${TRAVIS_BRANCH}" == "master" ] &&
+      (docker login --username $DOCKER_USER --password $DOCKER_PASS; \
+      make release)

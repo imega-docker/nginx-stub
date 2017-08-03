@@ -15,6 +15,7 @@
 -- along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 local headerRaw = ngx.req.raw_header()
+headerRaw = string.gsub(headerRaw, "\r", "")
 ngx.req.read_body()
 local data = ngx.req.get_body_data()
 
@@ -22,6 +23,7 @@ local filename = "/data/" .. ngx.now()
 local file = io.open(filename, "a+")
 file:write(headerRaw)
 if data ~= nil then
+    data = string.gsub(data, "\r", "")
     file:write(data)
 end
 file:close()
