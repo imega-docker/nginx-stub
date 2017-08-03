@@ -67,15 +67,15 @@ testOptions() {
 }
 
 testGet
-od -c data/*
+od -c /data/*
 testPost
-od -c data/*
+od -c /data/*
 testPostMulti
-od -c data/*
+od -c /data/*
 testPut
-od -c data/*
+od -c /data/*
 testOptions
-od -c data/*
+od -c /data/*
 
 printf '%.0s-' {1..80}
 echo
