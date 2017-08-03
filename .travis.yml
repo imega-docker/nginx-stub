@@ -1,19 +1,15 @@
 branches:
   only:
-    - master
-
+  - master
 services:
-  - docker
-
+- docker
 script:
-  - make test || exit 1
-
+- make test || exit 1
 after_success:
-  - >
-    [ "${TRAVIS_BRANCH}" == "master" ] &&
-      (docker login --username $DOCKER_USER --password $DOCKER_PASS; \
-      make release)
-
+- |
+  [ "${TRAVIS_BRANCH}" == "master" ] &&
+    (docker login --username $DOCKER_USER --password $DOCKER_PASS; \
+    make release)
 notifications:
   slack:
-    secure: NmT1eppSt2njoSn6K2i+eE4lbuPi+/q7K26sHSUPCjthGKqnHHCfuU0mX25YCrDxWrdhSbzxvEQJ42J2+cFMnPv1Z9hcQzYSLO6QOouAhPkoDHSx6lJOndG69j8WDyiVvXe8OCTGyR++p+co5ks+DbPr7ogfXBzOQmLXDzCEj8U1iyVn3/JwlUEgbitExxtYKvmc/+3T2K5BiDyZcUetw8HPeEQz4fsBttxvpp4fZQpgcWqRv20k+nRlxhaV16YEXuNPlS7kCd4kWt1VhriBk10enZcafxnGhmdX/Aw16mG5bor9xCkiJqdHP8+IK7amIoHHwB27XmoT6tqvFND4Oh7wTkA4a2b72VcTcrgkiMReuLxY0nZ9DxixqEzM9foAsIIWmGq3TbrXMaFGCvxXmbwma2x+uwX7ZqOd+5j5GEkFEe60MEtgMjE8KAX+pHE3Yp3/b69Bb3G5cPcdQMW3P0fJFNkdl1JdvYA3mf9eS0Il8w+cbMOAHzV5uP1br91ji7JusvOqHlbtGQv6+ys2mKyX590D22nQ8yv0xFCMSVhb2QhaLNf4v0p9+LE041+r/8e4FrYx4n5CLePQyNGQ/EZx/frv4Io38RlKNHJOpJhut6uX4/kWBWbtSUSIPIfCxs2Yi7BbdI5tx538yHMduI5RcmNeBf7+joGs1jUo6VU=
+    secure: jdnG7+3rlurbBYijZBMJ0vdQ//riBaYTvpHXV5ZxHWS8opruxa9Bi2OHYd/C5SHs8Zpe0jV3Xz4F1bUFNiZYO+RKnCl54ZZ2x6haPx3+TfEp7bRcMmlAiCOOqxhdJ4+baNTvLz/xS+RzSLB2gUrUhlk6h5fXrkkqmvfBDasKqNLFyKR1d0cYyeC0sb2M5kW2K08NwCnWa32lXPPcbr7ENgT6aZ7QpkoqsfxO7kyy4GY0C2Pd9beSjFU8jAyDSWKahye+GseJu1J9/hvX/038NIPIIwAvRDhpM0Fi9JBUT3CICeYfuxbLUvDrebMLAEUYQnwpv4OGbiCS9idC2cHlENK9CHiQYo/QAeVruLlpniVmBqHqlHM3dgOpOE3MMKG2emFhBHkYq6b0lberLJiWdXgltQOboxekg8zC/iSi1PpZpP7oS9twziVMIUJp8UqHLH8mF09yjQ2gAvcWCqG4E9rnqUQdW+7N4RKcYUvunj4zwUwBK1+h2/rMm/x+Y6jrOECXTLvuH20IiKZoTjWbZ9hpDUlKuQ3Lh0IGro/WSuu8KqdvJyyaiLLbyG3MNFpzL4Vj3l73/8hGrYPxvHQKIvbj756nodQ00/aOAvUFZPVFUdgx5m8LmFcsAevmK4sl1C9Oz3VqLUIV+5E4GbVLmI/1OudV+8zDBetMealiHDk=
