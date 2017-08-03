@@ -13,7 +13,7 @@ buildfs:
 		--packages="nginx-lua@v34"
 
 build/containers/nginx_stub:
-	@mkdir -p $(shell dirname $@)
+	@mkdir -p $(CURDIR)/$(shell dirname $@)
 	@docker run -d --name nginx_stub $(APPDIR) -v $(CURDIR)/data:/data imega/nginx-stub
 	@touch $@
 
